@@ -6,6 +6,7 @@ const Wallpaper = new Schema({
     title : {type : String},
     image : {type : String},
     video : {type : String},
+    type : {type : String},
     URLHD : {type : String, default : ''},
     URL2K : {type : String, default : ''},
     URL4K : {type : String, default : ''},

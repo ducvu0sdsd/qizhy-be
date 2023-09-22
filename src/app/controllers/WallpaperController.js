@@ -42,7 +42,7 @@ class wallpaperControllers {
 
     async updateWallPapers (req, res) {
         try {
-          await Wallpaper.updateOne({_id : req.body.id}, {title : req.body.title, video : req.body.video, URLHD : req.body.URLHD, URL2K: req.body.URL2K, URL4K: req.body.URL4K, image : req.file.path})
+          await Wallpaper.updateOne({_id : req.body.id}, {title : req.body.title, video : req.body.video, URLHD : req.body.URLHD, URL2K: req.body.URL2K, URL4K: req.body.URL4K, image : req.file.path, type : req.file.type})
           res.json({status : 200})
         } catch (error) {
           res.json({status : 500})
