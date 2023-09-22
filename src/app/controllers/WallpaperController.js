@@ -42,7 +42,7 @@ class wallpaperControllers {
 
     async updateWallPapers (req, res) {
         try {
-          if (req.file.path = '') {
+          if (req.file == undefined) {
             await Wallpaper.updateOne({_id : req.body.id}, {title : req.body.title, video : req.body.video, URLHD : req.body.URLHD, URL2K: req.body.URL2K, URL4K: req.body.URL4K, type : req.body.type})
           } else {
             await Wallpaper.updateOne({_id : req.body.id}, {title : req.body.title, video : req.body.video, URLHD : req.body.URLHD, URL2K: req.body.URL2K, URL4K: req.body.URL4K, image : req.file.path, type : req.body.type})
